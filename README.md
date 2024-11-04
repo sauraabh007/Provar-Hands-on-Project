@@ -1,4 +1,5 @@
-Was a two part project | 
+Ask was to create weather alerts and showcase errors if the weather was bad | 
+User Openweather API that is available for free |
 created 2 LWC | 
 one was used for external site hosted via LWC | 
 another was just an LWC component embedded in Opportunity page.
