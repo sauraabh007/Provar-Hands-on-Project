@@ -11,4 +11,4 @@ Steps to use:
   4. Place the LWC on opportunity page
 
 Key points:
-  1. Used fetch as it is a weather api performs better saving time for backend call
+  1. Used fetch method in JS for calling weather api because system would perform better saving time for backend call when using callback or @wire
