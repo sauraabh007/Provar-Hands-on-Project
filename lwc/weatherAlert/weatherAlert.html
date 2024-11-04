@@ -1,0 +1,46 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <template lwc:if={showCityNotFound}>
+        <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+            <span class="slds-assistive-text">error</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                </svg>
+            </span>
+                <h2>Entered city "{cityName}" could not be found.</h2>
+        </div>
+    </template>
+    <template lwc:if={showWarning}>
+        <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+            <span class="slds-assistive-text">warning</span>
+            <span class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small" title="Description of icon when needed">
+            <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"></use>
+            </svg>
+            </span>
+            <h2>Delivery might be delayed, as the weather in your city is {weatherMain}.
+            </h2>
+        </div>
+    </template>
+    <div class="slds-form-element">
+        <div class="slds-text-align_center"> <b>Enter Delivery Address Below
+        </b></div>
+        <label class="slds-form-element__label" for="text-input-id-46">
+        <abbr class="slds-required" title="required">* </abbr>Enter home/street number</label>
+        <div class="slds-form-element__control">
+            <input type="text" id="text-input-id-46" placeholder="home/street number goes here..." required="" class="slds-input" />
+        </div>
+        <label class="slds-form-element__label" for="text-input-id-46">
+        <abbr class="slds-required" title="required">* </abbr>Enter City Name</label>
+        <div class="slds-form-element__control">
+            <input type="text" id="text-input-id-47" placeholder="city name goes here..." required="" class="slds-input" value={cityName} onchange={setValue}/>
+        </div>
+        <label class="slds-form-element__label" for="text-input-id-46">
+        <abbr class="slds-required" title="required">* </abbr>Enter Zipcode</label>
+        <div class="slds-form-element__control">
+            <input type="text" id="text-input-id-48" placeholder="Zipcode goes here..." required="" class="slds-input" />
+        </div>
+            <button class="slds-button slds-button_brand slds-align_absolute-center" onclick={openWeatherCallout}>Save</button>
+    </div>
+</template>
